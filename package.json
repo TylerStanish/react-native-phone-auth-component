@@ -1,0 +1,35 @@
+{
+  "name": "react-native-phone-auth-component",
+  "version": "0.0.2",
+  "description": "A simple, elegant component that seamlessly integrates with a phone authentication setup, styling and transitions included",
+  "main": "src/index.js",
+  "author": {
+    "name": "Tyler Stanish",
+    "email": "tystanish@gmail.com"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-native": "^0.51.0",
+    "react-native-country-picker-modal": "^0.5.1",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0"
+  }
+}
