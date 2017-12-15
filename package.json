@@ -1,6 +1,6 @@
 {
   "name": "react-native-phone-auth-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple, elegant component that seamlessly integrates with a phone authentication setup, styling and transitions included",
   "main": "src/index.js",
   "author": {
@@ -9,14 +9,12 @@
   },
   "license": "ISC",
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "react-native": "^0.51.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react": "^15.5.4",
-    "react-native": "^0.51.0",
-    "react-native-country-picker-modal": "^0.5.1",
-    "webpack": "^2.6.1"
+    "react-native-country-picker-modal": "^0.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
