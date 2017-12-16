@@ -1,12 +1,16 @@
 # react-native-phone-auth-component
 A simple, elegant component that seamlessly integrates with a phone authentication setup, styling and transitions included
-
+![Gif](https://media.giphy.com/media/3o6fIUTzWand2sRtwQ/giphy.gif)
+# Installation
+```npm i --save react-native-phone-auth-component```
 # Usage
 ### Default Props
 ```javascript
+import PhoneAuth from 'react-native-phone-auth-component';
+...
 <PhoneAuth
-  signInWithPhone={phone => this.signInWithPhone(phone)}
-  redeemCode={code => this.redeemCode(code)}
+  signInWithPhone={phone => console.log('Please attach method to signInWithPhone prop')}
+  redeemCode={code => console.log('Please attach method to redeemCode prop')}
   codeLength={4}
   buttonTextColor={'black'}
   spinnerColor={'black'}
@@ -18,9 +22,25 @@ A simple, elegant component that seamlessly integrates with a phone authenticati
   disclaimerMessage={'*Message & data rates may apply.'}
 />
 ```
+### Props
+| Prop Name  | Data Type | Required? | Default Value | Description |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| signInWithPhone  | Function  | **Yes** | console.log | Event handler when user enters phone number. Phone number as a String as first argument. Must return a Promise to proceed |
+| redeemCode  | Function  | **Yes** | console.log | Event handler when user enters code. Code as a Number as first argument. Must return a Promise to proceed |
+| color  | String  | No | '#ff8203' | Color of text underline and buttons |
+| buttonTextColor  | String  | No | 'white' | Color of button text |
+| spinnerColor  | String  | No | 'white' | Color of the spinner when loading |
+| androidFont  | String  | No | 'monospace' | Android font type |
+| iOSFont  | String  | No | 'Menlo' | iOS font type |
+| containerStyle  | Object  | No | {flex: 1} | Style of the container of the component |
+| verifyButtonMessage  | String  | No | 'Verify Phone Number*' | The message on the first button |
+| disclaimerMessage  | String  | No | 'Message & data rates may apply.' | The disclaimer message |
+| enterCodeMessage  | String  | No | 'Enter Code' | The message on the second button |
+| codeLength  | Number  | No | 4 | The length of the code the user will enter |
+### Returning a Promise
+In order for the component to know when you go to the server and send off the text message, you must return a promise in your helper method. Here's an example to illustrate how this would happen
 
 # Example
-![Gif](https://media.giphy.com/media/3o6fIUTzWand2sRtwQ/giphy.gif)
 ```javascript
 class PhoneVerifyScreen extends React.Component{
 
@@ -63,6 +83,9 @@ class PhoneVerifyScreen extends React.Component{
   render(){
     return(
       <View style={{flex: 1}}>
+      {/*           ^^^^^^^^ */}
+      {/* Make sure to have flex: 1 on parent! */}
+      
         <StatusBar hidden={false}/>
         <PhoneAuth
           signInWithPhone={phone => this.signInWithPhone(phone)}
