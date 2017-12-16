@@ -318,7 +318,7 @@ PhoneVerifyScreen.defaultProps = {
   iOSFont: 'Menlo',
   containerStyle: {flex: 1},
   verifyButtonMessage: 'Verify Phone Number*',
-  enterCodeMessage: 'Enter code',
+  enterCodeMessage: 'Enter Code',
   disclaimerMessage: '*Message & data rates may apply.',
   codeLength: 4
 };
