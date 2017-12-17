@@ -1,6 +1,6 @@
 {
   "name": "react-native-phone-auth-component",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A simple, elegant component that seamlessly integrates with a phone authentication setup, styling and transitions included",
   "main": "src/index.js",
   "author": {

@@ -51,8 +51,8 @@ class PhoneVerifyScreen extends React.Component{
       phoneAuthText: {
         fontSize: width/10,
         alignItems: 'center',
-        borderBottomWidth: 1,
-        borderBottomColor: this.props.color,
+        // borderBottomWidth: 1,
+        // borderBottomColor: this.props.color,
         // textDecorationLine: 'underline',
         margin: 10,
         fontFamily: Platform.OS === 'android' ? this.props.androidFont : this.props.iOSFont
@@ -318,7 +318,7 @@ PhoneVerifyScreen.defaultProps = {
   iOSFont: 'Menlo',
   containerStyle: {flex: 1},
   verifyButtonMessage: 'Verify Phone Number*',
-  enterCodeMessage: 'Enter Code',
+  enterCodeMessage: 'Enter code',
   disclaimerMessage: '*Message & data rates may apply.',
   codeLength: 4
 };
