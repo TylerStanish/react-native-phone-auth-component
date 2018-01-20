@@ -1,6 +1,6 @@
 # react-native-phone-auth-component
 A simple, elegant component that integrates with a phone authentication setup, styling and transitions included
-![Gif](https://media.giphy.com/media/3o6fIUTzWand2sRtwQ/giphy.gif)
+![Gif](https://media.giphy.com/media/l49JPOcwVGtgISK40/giphy.gif)
 # Installation
 ```npm i --save react-native-phone-auth-component```
 # Usage
