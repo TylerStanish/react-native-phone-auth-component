@@ -49,8 +49,12 @@ class PhoneVerifyScreen extends React.Component{
     code: ''
   };
 
+  // here is where you connect to your api to redeem a user's code
+  // I'm using Firebase in this example but of course you don't have to
+  // To avoid confusion, I'm storing the API address in process.env.URL. You don't have to do this
   signInWithPhone(phone){
     this.setState({phone});
+    
     return axios.post(process.env.URL + '/signInWithPhone', {
       phone
     }).then((tok) => {
@@ -70,7 +74,6 @@ class PhoneVerifyScreen extends React.Component{
       firebase.auth().signInWithCustomToken(tok).then(() => {
         return Promise.resolve();
       }).catch(e => {
-        console.log(e);
         alert(e.error);
         return Promise.reject();
       });
@@ -86,7 +89,6 @@ class PhoneVerifyScreen extends React.Component{
       {/*           ^^^^^^^^ */}
       {/* Make sure to have flex: 1 on parent! */}
       
-        <StatusBar hidden={false}/>
         <PhoneAuth
           signInWithPhone={phone => this.signInWithPhone(phone)}
           redeemCode={code => this.redeemCode(code)}
