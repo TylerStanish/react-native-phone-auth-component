@@ -1,6 +1,7 @@
 {
   "name": "react-native-phone-auth-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
+	"keywords": ["react", "react native", "phone", "auth", "component"],
   "description": "A simple, elegant component that seamlessly integrates with a phone authentication setup, styling and transitions included",
   "main": "src/index.js",
   "author": {
@@ -11,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/TylerStanish/react-native-phone-auth-component"
   },
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^15.5.4",
     "react-native": "^0.51.0"
