@@ -15,15 +15,6 @@ import PropTypes from 'prop-types';
 
 const {width} = Dimensions.get('window');
 
-/*
-*
-* SCRUM
-*
-* 1. Make sure they have flex: 1 on parent
-* 2. Test
-*
-*
-* */
 
 class PhoneVerifyScreen extends React.Component{
 
@@ -213,9 +204,8 @@ class PhoneVerifyScreen extends React.Component{
             <CountryPicker
               cca2={this.state.countryInfo.cca2}
               onChange={e => {
-                this.setState({countryInfo: e}, () => {
-                  this._ref.focus();
-                });
+                this._ref.focus();
+                this.setState({countryInfo: e});
               }}
               onClose={() => this._ref.focus()}
               filterable
