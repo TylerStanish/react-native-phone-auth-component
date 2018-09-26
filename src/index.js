@@ -25,8 +25,8 @@ class PhoneVerifyScreen extends React.Component{
       code: '',
       keyboardHeight: 0,
       countryInfo: {
-        cca2: 'US',
-        callingCode: '1',
+        cca2: p.cca2,
+        callingCode: p.callingCode
       },
 
       verifying: true,
@@ -210,6 +210,7 @@ class PhoneVerifyScreen extends React.Component{
               onClose={() => this._ref.focus()}
               filterable
               closeable
+              showCallingCode
             />
             <Text style={this.styles.phoneAuthText}>+{this.state.countryInfo.callingCode}</Text>
             {this.renderAreaCode()}
@@ -295,7 +296,10 @@ PhoneVerifyScreen.propTypes = {
   verifyButtonMessage: PropTypes.string,
   enterCodeMessage: PropTypes.string,
   disclaimerMessage: PropTypes.string,
-  codeLength: PropTypes.number
+  codeLength: PropTypes.number,
+
+  cca2: PropTypes.string,
+  callingCode: PropTypes.string
 };
 
 PhoneVerifyScreen.defaultProps = {
@@ -310,7 +314,10 @@ PhoneVerifyScreen.defaultProps = {
   verifyButtonMessage: 'Verify Phone Number*',
   enterCodeMessage: 'Enter code',
   disclaimerMessage: '*Message & data rates may apply.',
-  codeLength: 4
+  codeLength: 4,
+
+  cca2: 'US',
+  callingCode: '1'
 };
 
 export default PhoneVerifyScreen;

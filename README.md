@@ -12,14 +12,16 @@ import PhoneAuth from 'react-native-phone-auth-component';
   signInWithPhone={phone => console.log('Please attach method to signInWithPhone prop')}
   redeemCode={code => console.log('Please attach method to redeemCode prop')}
   codeLength={4}
-  buttonTextColor={'black'}
-  spinnerColor={'black'}
-  color={'#ff8203'}
-  androidFont={'monospace'}
-  iOSFont={'Menlo'}
+  buttonTextColor='black'
+  spinnerColor='black'
+  color='#ff8203'
+  androidFont='monospace'
+  iOSFont='Menlo'
   containerStyle={{flex: 1}}
-  verifyButtonMessage={'Verify Phone Number*'}
-  disclaimerMessage={'*Message & data rates may apply.'}
+  verifyButtonMessage='Verify Phone Number*'
+  disclaimerMessage='*Message & data rates may apply.'
+  cca2='US'
+  callingCode='1'
 />
 ```
 ### Props
@@ -37,6 +39,8 @@ import PhoneAuth from 'react-native-phone-auth-component';
 | disclaimerMessage  | String  | No | 'Message & data rates may apply.' | The disclaimer message |
 | enterCodeMessage  | String  | No | 'Enter Code' | The message on the second button |
 | codeLength  | Number  | No | 4 | The length of the code the user will enter |
+| cca2	| String | No | 'US' | The default country code |
+| callingCode | String | No | '1' | The default calling code accompanied by cca2 |
 ### Returning a Promise
 In order for the component to know when you go to the server and send off the text message, you must return a promise in your helper method. Here's an example to illustrate how this would happen
 
