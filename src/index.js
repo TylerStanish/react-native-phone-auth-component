@@ -299,7 +299,7 @@ PhoneVerifyScreen.propTypes = {
   codeLength: PropTypes.number,
 
   cca2: PropTypes.string,
-  callingCode: PropTypes.number
+  callingCode: PropTypes.string
 };
 
 PhoneVerifyScreen.defaultProps = {
@@ -317,7 +317,7 @@ PhoneVerifyScreen.defaultProps = {
   codeLength: 4,
 
   cca2: 'US',
-  callingCode: 1
+  callingCode: '1'
 };
 
 export default PhoneVerifyScreen;
