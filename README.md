@@ -21,7 +21,7 @@ import PhoneAuth from 'react-native-phone-auth-component';
   verifyButtonMessage='Verify Phone Number*'
   disclaimerMessage='*Message & data rates may apply.'
   cca2='US'
-  callingCode={1}
+  callingCode='1'
 />
 ```
 ### Props
@@ -40,7 +40,7 @@ import PhoneAuth from 'react-native-phone-auth-component';
 | enterCodeMessage  | String  | No | 'Enter Code' | The message on the second button |
 | codeLength  | Number  | No | 4 | The length of the code the user will enter |
 | cca2	| String | No | 'US' | The default country code |
-| callingCode | Number | No | 1 | The default calling code accompanied by cca2 |
+| callingCode | String | No | '1' | The default calling code accompanied by cca2 |
 ### Returning a Promise
 In order for the component to know when you go to the server and send off the text message, you must return a promise in your helper method. Here's an example to illustrate how this would happen
 
