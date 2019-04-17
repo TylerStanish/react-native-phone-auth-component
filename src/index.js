@@ -181,7 +181,7 @@ class PhoneVerifyScreen extends React.Component{
 
   redeemCode(){
     this.setState({loadingRedeem: true});
-    this.props.redeemCode(Number(this.state.code)).catch(() => {
+    this.props.redeemCode(String(this.state.code)).catch(() => {
       this.setState({loadingRedeem: false});
     });
   }

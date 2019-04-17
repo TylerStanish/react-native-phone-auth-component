@@ -28,7 +28,7 @@ import PhoneAuth from 'react-native-phone-auth-component';
 | Prop Name  | Data Type | Required? | Default Value | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | signInWithPhone  | Function  | **Yes** | console.log | Event handler when user enters phone number. Phone number as a String as first argument. Must return a Promise to proceed |
-| redeemCode  | Function  | **Yes** | console.log | Event handler when user enters code. Code as a Number as first argument. Must return a Promise to proceed |
+| redeemCode  | Function  | **Yes** | console.log | Event handler when user enters code. Code as a String as first argument. Must return a Promise to proceed |
 | color  | String  | No | '#ff8203' | Color of text underline and buttons |
 | buttonTextColor  | String  | No | 'white' | Color of button text |
 | spinnerColor  | String  | No | 'white' | Color of the spinner when loading |
