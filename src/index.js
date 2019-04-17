@@ -40,7 +40,7 @@ class PhoneVerifyScreen extends React.Component{
     };
     this.styles = {
       phoneAuthText: {
-        fontSize: width/10,
+        fontSize: width/p.phoneLength,
         alignItems: 'center',
         // borderBottomWidth: 1,
         // borderBottomColor: this.props.color,
@@ -84,7 +84,7 @@ class PhoneVerifyScreen extends React.Component{
 
   renderAreaCode(){
     let arr = [];
-    let numbers = this.state.number.split('').slice(0, 3);
+    let numbers = this.state.number.split('').slice(0, this.props.areaCodeLength);
     for(let i=0; i<3; i++){
       if(isNaN(numbers[i])) numbers[i] = '_';
     }
@@ -115,8 +115,9 @@ class PhoneVerifyScreen extends React.Component{
 
   renderNumber(){
     let arr = [];
-    let numbers = this.state.number.split('').slice(0, 10);
-    for(let i=0; i<10; i++){
+		const len = this.props.phoneLength;
+    let numbers = this.state.number.split('').slice(0, len);
+    for(let i=0; i<len; i++){
       if(isNaN(numbers[i])) numbers[i] = '_';
     }
     let next = numbers.indexOf('_');
@@ -129,12 +130,12 @@ class PhoneVerifyScreen extends React.Component{
         num
       ));
     });
-    arr.push(React.createElement(
+		/*arr.push(React.createElement(
       Text,
       { key: Math.random(), style: this.styles.phoneAuthText },
       "-"
-    ));
-    numbers.slice(6, 10).map((num, index) => {
+		));*/
+    numbers.slice(6, len).map((num, index) => {
       let color = 'black';
       if(index+6 === next) color = this.props.color;
       arr.push(React.createElement(
@@ -299,7 +300,9 @@ PhoneVerifyScreen.propTypes = {
   codeLength: PropTypes.number,
 
   cca2: PropTypes.string,
-  callingCode: PropTypes.string
+	callingCode: PropTypes.string,
+
+	phoneLength: PropTypes.number,
 };
 
 PhoneVerifyScreen.defaultProps = {
@@ -317,7 +320,9 @@ PhoneVerifyScreen.defaultProps = {
   codeLength: 4,
 
   cca2: 'US',
-  callingCode: '1'
+	callingCode: '1',
+
+	phoneLength: 10
 };
 
 export default PhoneVerifyScreen;
