@@ -218,6 +218,7 @@ class PhoneVerifyScreen extends React.Component{
           <View style={{flexDirection: 'row'}}>{this.renderNumber()}</View>
         </View>
         <TextInput
+          testID='phoneInput'
           ref={ref => this._ref = ref}
           keyboardType={'phone-pad'}
           style={{position: 'absolute', top: -100, left: -100}}
