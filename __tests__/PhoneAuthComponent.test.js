@@ -22,10 +22,7 @@ test('should call signInWithPhone prop when button is clicked', () => {
 test('should call redeemCode when button is clicked', async () => {
   const mock = jest.fn(() => Promise.resolve());
   const {getByText, getByTestId} = render(<AuthComponent
-    signInWithPhone={() => {
-      console.log("called func");
-      return Promise.resolve()
-    }}
+    signInWithPhone={() => Promise.resolve()}
     redeemCode={mock}
     verifyButtonMessage='clickme'
     enterCodeMessage='clickme1'
