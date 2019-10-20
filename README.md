@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TylerStanish/react-native-phone-auth-component.svg?branch=master)](https://travis-ci.org/TylerStanish/react-native-phone-auth-component.svg?branch=master)
+[![Build Status](https://travis-ci.org/TylerStanish/react-native-phone-auth-component.svg?branch=master)](https://travis-ci.org/TylerStanish/react-native-phone-auth-component)
 [![npm version](https://badge.fury.io/js/react-native-phone-auth-component.svg)](https://badge.fury.io/js/react-native-phone-auth-component)
 # react-native-phone-auth-component
 A simple, elegant component that integrates with a phone authentication setup, styling and transitions included
