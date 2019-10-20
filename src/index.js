@@ -252,6 +252,7 @@ class PhoneVerifyScreen extends React.Component{
         flex: 1
       }}>
         <TextInput
+          testID='codeInput'
           autoFocus
           keyboardType={'phone-pad'}
           style={{position: 'absolute', top: -100, left: -100}}
@@ -266,6 +267,7 @@ class PhoneVerifyScreen extends React.Component{
         <View/>
         <View style={{flexDirection: 'row'}}>{this.renderCode()}</View>
         <Button
+          testID='codeButton'
           title={this.props.enterCodeMessage}
           backgroundColor={this.props.color}
           loading={this.state.loadingRedeem}
